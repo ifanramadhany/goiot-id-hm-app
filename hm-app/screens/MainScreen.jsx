@@ -18,7 +18,7 @@ export default function MainScreen() {
   const containerTabActive = {
     height: 50,
     width: 50,
-    backgroundColor: '#14b8a6',
+    backgroundColor: '#d1fae5',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
@@ -35,7 +35,7 @@ export default function MainScreen() {
 
   const textStyleActive = {
     fontSize: 10,
-    color: 'white'
+    color: '#059669'
   }
 
   const textStyleInactive = {
@@ -71,7 +71,7 @@ export default function MainScreen() {
             </View>
           )
         },
-        tabBarActiveTintColor: "white",
+        tabBarActiveTintColor: "#059669",
         tabBarInactiveTintColor: "gray",
       })}
     >
