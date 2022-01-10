@@ -7,6 +7,7 @@ import {
   Image,
   TouchableOpacity,
   StatusBar,
+  ScrollView,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "react-native-vector-icons";
@@ -78,13 +79,19 @@ export default function HomeScreen() {
                 </Text>
               </View>
               <View style={styles.iplInvoiceTopBottom}>
-                <Text
-                  style={{ marginLeft: 15, fontSize: 16, color: "#fff" }}
-                >
+                <Text style={{ marginLeft: 15, fontSize: 16, color: "#fff" }}>
                   Status
                 </Text>
                 <View style={styles.paid}>
-                  <Text style={{color: '#059669', fontSize: 13, fontWeight: 'bold'}}>paid</Text>
+                  <Text
+                    style={{
+                      color: "#059669",
+                      fontSize: 13,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    paid
+                  </Text>
                 </View>
               </View>
             </LinearGradient>
@@ -99,13 +106,126 @@ export default function HomeScreen() {
           </View>
 
           <View style={styles.iniRasaKita}>
-          <Image
-            style={styles.imgPopularInside}
-            resizeMode="cover"
-            source={require("../assets/burger-ads.jpg")}
-          ></Image>
+            <Image
+              style={styles.imgPopularInside}
+              resizeMode="cover"
+              source={require("../assets/burger-ads.jpg")}
+            ></Image>
           </View>
         </View>
+        <Text
+          style={{
+            fontSize: 26,
+            marginVertical: 15,
+            marginLeft: 20,
+            fontWeight: "bold",
+            fontStyle: "italic",
+          }}
+        >
+          Your Needs
+        </Text>
+        <ScrollView
+          contentContainerStyle={styles.yourNeedsWrapper}
+        >
+          {/* your needs item  */}
+          <View style={styles.yourNeedsItem}>
+            <View style={styles.boxIcon}>
+              <FontAwesome
+                name="file"
+                size={48}
+                color="#334155"
+                style={{ marginRight: 10 }}
+              />
+            </View>
+            <View style={styles.titleIcon}>
+              <Text>Static Billing</Text>
+            </View>
+          </View>
+
+          <View style={styles.yourNeedsItem}>
+            <View style={styles.boxIcon}>
+              <FontAwesome
+                name="file"
+                size={48}
+                color="#334155"
+                style={{ marginRight: 10 }}
+              />
+            </View>
+            <View style={styles.titleIcon}>
+              <Text>Static Billing</Text>
+            </View>
+          </View>
+
+          <View style={styles.yourNeedsItem}>
+            <View style={styles.boxIcon}>
+              <FontAwesome
+                name="file"
+                size={48}
+                color="#334155"
+                style={{ marginRight: 10 }}
+              />
+            </View>
+            <View style={styles.titleIcon}>
+              <Text>Static Billing</Text>
+            </View>
+          </View>
+
+          <View style={styles.yourNeedsItem}>
+            <View style={styles.boxIcon}>
+              <FontAwesome
+                name="file"
+                size={48}
+                color="#334155"
+                style={{ marginRight: 10 }}
+              />
+            </View>
+            <View style={styles.titleIcon}>
+              <Text>Static Billing</Text>
+            </View>
+          </View>
+
+          <View style={styles.yourNeedsItem}>
+            <View style={styles.boxIcon}>
+              <FontAwesome
+                name="file"
+                size={48}
+                color="#334155"
+                style={{ marginRight: 10 }}
+              />
+            </View>
+            <View style={styles.titleIcon}>
+              <Text>Static Billing</Text>
+            </View>
+          </View>
+
+          <View style={styles.yourNeedsItem}>
+            <View style={styles.boxIcon}>
+              <FontAwesome
+                name="file"
+                size={48}
+                color="#334155"
+                style={{ marginRight: 10 }}
+              />
+            </View>
+            <View style={styles.titleIcon}>
+              <Text>Static Billing</Text>
+            </View>
+          </View>
+
+          <View style={styles.yourNeedsItem}>
+            <View style={styles.boxIcon}>
+              <FontAwesome
+                name="file"
+                size={48}
+                color="#334155"
+                style={{ marginRight: 10 }}
+              />
+            </View>
+            <View style={styles.titleIcon}>
+              <Text>Static Billing</Text>
+            </View>
+          </View>
+        </ScrollView>
       </View>
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -113,9 +233,43 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  titleIcon: {
+    marginTop: 8,
+  },
+  boxIcon: {
+    backgroundColor: "#fff",
+    height: 80,
+    width: 80,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.29,
+    shadowRadius: 4.65,
+
+    elevation: 7,
+  },
+  yourNeedsItem: {
+    // backgroundColor: "green",
+    height: 110,
+    width: 110,
+    alignItems: "center",
+    marginVertical: 7,
+  },
+  yourNeedsWrapper: {
+    // backgroundColor: "green",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    marginLeft: 30,
+    flexWrap: "wrap",
+  },
   imgPopularInside: {
-    height: '100%',
-    width: '100%',
+    height: "100%",
+    width: "100%",
     // backgroundColor: 'white',
     borderRadius: 10,
   },
@@ -136,7 +290,7 @@ const styles = StyleSheet.create({
     elevation: 7,
   },
   paid: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     height: 25,
     width: 70,
     marginRight: 15,
@@ -156,7 +310,7 @@ const styles = StyleSheet.create({
     height: "37%",
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: 'flex-start',
+    alignItems: "flex-start",
   },
   iplInvoiceBottom: {
     height: "32%",
@@ -189,9 +343,9 @@ const styles = StyleSheet.create({
     elevation: 7,
   },
   iplInvoiceWrapper: {
-    // backgroundColor: 'yellow',
+    // backgroundColor: "yellow",
     width: "100%",
-    height: 330,
+    height: 335,
   },
   notifStyle: {
     marginTop: 5,
